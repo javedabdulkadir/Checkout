@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "b5090f83-7f11-41df-943e-0e9d187ece42",
+		"name": "ProcessPayment_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8922185"
+	},
+	"item": [
+		{
+			"name": "doPayment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"source\": {\r\n    \"type\": \"token\",\r\n    \"token\": \"tok_4gzeau5o2uqubbk6fufs3m7p54\"\r\n  },\r\n  \"amount\": 6500,\r\n  \"currency\": \"USD\",\r\n  \"processing_channel_id\": \"pc_ovo75iz4hdyudnx6tu74mum3fq\",\r\n  \"reference\": \"ORD-5023-4E89\",\r\n  \"metadata\": {\r\n    \"udf1\": \"TEST123\",\r\n    \"coupon_code\": \"NY2018\",\r\n    \"partner_id\": 123989\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/payment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retreivePayment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/retreivepayment/pay_mbabizu24mvu3mela5njyhpit4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"retreivepayment",
+						"pay_mbabizu24mvu3mela5njyhpit4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
